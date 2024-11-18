@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Consciência Negra</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+<body>
+  <!-- Header Fixo -->
+  <header class="header">
+    <img class="logo" src="" alt="">
+    <h1 class="title">"Preto e ouro, minha cor e meu valor."</h1>
+    <nav class="menu-icon" onclick="toggleMenu()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="35" height="28" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+      </svg>
+    </nav>
+  </header>
+
+  <!-- Menu Lateral (direito) -->
+  <aside class="side-menu" id="side-menu">
+    <button class="close-btn" onclick="toggleMenu()">✖</button>
+    <ul>
+      <li><a href="#historia">História</a></li>
+      <li><a href="#relatos">Relatos</a></li>
+      <li><a href="#frases">Frases</a></li>
+      <li><a href="#quizzes">Quizzes</a></li>
+      <li><a href="#mensagens">Mensagens</a></li>
+    </ul>
+  </aside>
+
+  <section id="hero" class="hero-section">
+    <div class="hero-overlay">
+      <h1>Novembro Preto</h1>
+      <p>Dia da Consciência Negra: Celebrando a Resistência e a Cultura</p>
+    </div>
+  </section>  
+
+  <!-- Seção 1: História -->
+  <section id="historia" class="section historia">
+    <h2>História</h2>
+    <div class="timeline">
+
+      <!-- Evento à direita -->
+      <div class="timeline-event right">
+        <div class="event-image">
+          <img src="./src/6.png" alt="">
+        </div>
+        <div class="event-content">
+          <h3>Escravidão no Brasil:</h3>
+          <p>Durante a colonização portuguesa, o Brasil se tornou o maior destino do tráfico transatlântico de escravizados, com cerca de 5 milhões de africanos trazidos à força e sendo submetidos a condições desumanas.</p>
+        </div>
+      </div>
+
+      <!-- Evento à esquerda -->
+      <div class="timeline-event left">
+        <div class="event-content">
+          <h3>Caminho para a Abolição:</h3>
+          <p>O processo de abolição foi gradual e influenciado por pressões internas e externas. Essas pressões consistiam nos movimentos abolicionistas alinhados com as pressões da Inglaterra, além do crescente descontentamento das camadas sociais mais esclarecidas. 
+            Leis anteriores, como a Lei do Ventre Livre (1871) e a Lei dos Sexagenários (1885), apontaram uma transição para a abolição completa, que foi concretizada com a assinatura da  pela Princesa Isabel em 13 de maio de 1888. </p>
+        </div>
+        <div class="event-image">
+          <img src="./src/7.png" alt="">
+        </div>
+      </div>
+
+
+      <div class="timeline-event right">
+        <div class="event-image">
+          <img src="./src/8.png" alt="">
+        </div>
+        <div class="event-content">
+          <h3>Pós-Abolição:</h3>
+          <p>Entretanto, a abolição não veio acompanhada de medidas para integrar a população negra na sociedade. Sem acesso a terras, educação ou emprego formal, muitos ex-escravizados enfrentaram marginalização e exclusão. 
+            A falta de políticas públicas eficazes perpetuou um ciclo de pobreza que se estendeu por gerações, criando desigualdades socioeconômicas persistentes até os dias atuais. </p>
+        </div>
+      </div>
+
+
+      <div class="timeline-event left">
+        <div class="event-content">
+          <h3>Lei Afonso Arinos (1951):</h3>
+          <p>Primeira legislação no Brasil a tratar o racismo como crime, porém ela era uma lei branda.</p>
+        </div>
+        <div class="event-image">
+          <img src="./src/14.png" alt="">
+        </div>
+      </div>
+
+
+      <div class="timeline-event right">
+        <div class="event-image">
+          <img src="./src/4.png" alt="">
+        </div>
+      <div class="event-content">
+          <h3>Constituição de 1988:</h3>
+          <p>Trouxe garantias de igualdade e combate ao racismo, considerando-o crime inafiançável. </p>
+      </div>
+    </div>
+
+
+      <!-- Evento à esquerda -->
+      <div class="timeline-event left">
+        <div class="event-content">
+          <h3>Lei Caó (1989):</h3>
+          <p>Substituição da lei Afonso Arinos que caracterizou o racismo como crime, com penas mais severas.</p>
+        </div>
+        <div class="event-image">
+          <img src="./src/9.png" alt="">
+        </div>
+      </div>
+
+
+      <div class="timeline-event right">
+        <div class="event-image">
+          <img src="./src/10.png" alt="">
+        </div>
+        <div class="event-content">
+          <h3>Estatuto da Igualdade Racial (2010):</h3>
+          <p>Trouxe leis para a promoção da igualdade de oportunidades e o combate à discriminação.
+            Em 2003, a Lei nº 10.639 tornou obrigatório o ensino da história e cultura afro-brasileira nas escolas, reconhecendo a importância da valorização cultural e histórica.</p>
+        </div>
+      </div>
+
+
+      <div class="timeline-event left">
+        <div class="event-content">
+          <h3>Lei nº 10.639:</h3>
+          <p>Tornou obrigatório o ensino da história e cultura afro-brasileira nas escolas, reconhecendo a importância da valorização cultural e histórica.</p>
+        </div>
+        <div class="event-image">
+          <img src="./src/11.png" alt="">
+        </div>
+      </div>
+      
+
+      <div class="timeline-event right">
+        <div class="event-image">
+          <img src="./src/12.png" alt="">
+        </div>
+        <div class="event-content">
+          <h3>Lei Nº 14.532/2023:</h3>
+          <p>Equipara a injúria racial ao crime de racismo, foi sancionada pelo presidente Lula da Silva e a legislação já está em vigor.
+            Já recentemente, as políticas de cotas raciais em universidades e serviços públicos buscaram promover a inclusão e igualdade de oportunidades para a população negra.</p>
+        </div>
+      </div>
+      
+      
+    </div>
+  </section>
+  
+  <!-- Coloque as imagens aqui no comentário :) -->
+
+  <!-- Seção 2: Relatos -->
+  <section id="relatos" class="section relatos">
+    <h2>Relatos de Superação</h2>
+    <div class="relatos-grid">
+      <!-- Bloco de Relato -->
+      <div class="relato-item">
+        <img src="./src/16.png" alt="Luislinda Valois">
+        <i><h5>"Eu sou a prova viva de que a cor da pele não define a capacidade de ninguém."</h5></i>
+        <h3>Luislinda Valois</h3>
+        <p>Quando tinha nove anos, um professor a desprezou pela simplicidade de seu material escolar, dizendo que ela deveria estar cozinhando feijoada para brancos em vez de estudar. Esse incidente a motivou a seguir a carreira jurídica e lutar contra o racismo.</p>
+      </div>
+  
+      <div class="relato-item">
+        <img src="./src/20.png" alt="Carolina Maria de Jesus">
+        <i><h5>"Escrevo a realidade, a verdade. Não sou romancista. Sou cronista da realidade."</h5></i>
+        <h3>Carolina Maria de Jesus</h3>
+        <p>Mesmo após o sucesso de seu livro, Carolina continuou a ser vista como uma "outra" pela sociedade, enfrentando discriminação por sua cor e origem humilde. Sua obra é um testemunho poderoso de sua luta contra o racismo.</p>
+      </div>
+  
+      <!-- Adicione mais itens conforme necessário -->
+      <div class="relato-item">
+        <img src="./src/17.png" alt="Abdias do Nascimento">
+        <i><h5>"O racismo é uma praga que precisa ser extirpada da sociedade."</h5></i>
+        <h3>Abdias do Nascimento</h3>
+        <p>Abdias recusou um emprego porque o condutor da carroça que o levaria ao trabalho sugeriu que ele viajasse na parte que transportava cargas e animais. Além disso, ele foi preso várias vezes por resistir a atos racistas e por críticar o governo.</p>
+      </div>
+
+      <div class="relato-item">
+        <img src="./src/18.png" alt="Lélia Gonzalez">
+        <i><h5>"Ser negro no Brasil é resistir todos os dias. É lutar para existir e ser reconhecido."</h5></i>
+        <h3>Lélia Gonzalez</h3>
+        <p>Lélia relatou o difícil processo de construção de sua identidade racial em um contexto onde a negritude era rejeitada e o embranquecimento era imposto como uma estratégia de defesa contra a discriminação.  tornou uma figura central no movimento negro e feminista.</p>
+      </div>
+
+      <div class="relato-item">
+        <img src="./src/19.png" alt="Rosa Parks">
+        <i><h5>"Saber o que deve ser feito elimina o medo."</h5></i>
+        <h3>Rosa Parks</h3>
+        <p>Rosa Parks enfrentou diversas formas de discriminação racial ao longo de sua vida. Em um incidente ela foi presa por violar as leis de segregação racial, se recusando a ceder seu assento no ônibus. Este ato de resistência pacífica foi um ponto de virada na luta pelos direitos civis nos Estados Unidos.</p>
+      </div>
+
+      
+    </div>
+  </section>  
+
+ 
+  <section id="frases" class="frases">
+    <h2>Frases Impactantes</h2>
+    <!-- Container do Swiper -->
+    <div class="swiper-container">
+      <!-- Wrapper para os slides -->
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+            <div class="frase-item">
+                <p>"A liberdade nunca é dada de bom grado pelo opressor, ela deve ser conquistada pelo oprimido."</p>
+                <span>- Martin Luther King Jr.</span>
+              </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+            <div class="frase-item">
+                <p>"A luta não é contra o racismo, é contra a falta de humanidade."</p>
+                <span>- Conceição Evaristo</span>
+              </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+            <div class="frase-item">
+                <p>"O racismo é um fardo que confunde os corações e destrói as mentes."</p>
+                <span>- Nelson Mandela</span>
+              </div>
+        </div>
+        <!-- Adicione mais frases aqui -->
+         <!-- Slide 1 -->
+        <div class="swiper-slide">
+            <div class="frase-item">
+                <p>"A liberdade não é algo que você conquista, é algo que você pratica."</p>
+                <span>-Beyoncé</span>
+              </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <div class="frase-item">
+                <p>"Minha luta diária é para ser reconhecida como sujeito, impor minha existência numa sociedade que insiste em negá-la"</p>
+                <span>- Djamila Ribeiro</span>
+              </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="swiper-slide">
+            <div class="frase-item">
+                <p>"Não sou descendente de escravos. Sou descendente de pessoas que foram escravizadas."</p>
+                <span>- Makota Valdinha</span>
+              </div>
+          </div>
+
+          <div class="swiper-slide">
+          <div class="frase-item">
+            <p>"A luta pela liberdade nunca é fácil, mas é necessária."</p>
+            <span>- Angela Davis</span>
+          </div>
+          </div>
+
+          <div class="swiper-slide">
+          <div class="frase-item">
+            <p>"Não vou mais ficar calado, não vou mais me esconder, vou lutar até o fim. A luta é minha, a luta é nossa, pra um dia poder ver, o Brasil, livre do racismo, livre da opressão!"</p>
+            <span>- Racionais MCs</span>
+          </div>
+          </div>
+
+          <div class="swiper-slide">
+          <div class="frase-item">
+            <p>"A ignorância não é uma bênção, é uma maldição."</p>
+            <span>- Malcom X</span>
+          </div>
+          </div>
+
+          <div class="swiper-slide">
+          <div class="frase-item">
+            <p>"Não basta não ser racista, tem que ser antirracista!"</p>
+            <span>- Zeca Baleiro</span>
+          </div>        
+          </div>
+          <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+  </section>
+  
+
+  <section id="quizzes" class="section quizzes">
+    <h2>Teste Seus Conhecimentos</h2>
+    <div class="quiz-container">
+      
+      <div class="quiz-item">
+        <p class="quiz-question">Quem foi Zumbi dos Palmares?</p>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">Um político brasileiro</button>
+          <button class="quiz-option" data-correct="true">Líder quilombola</button>
+          <button class="quiz-option" data-correct="false">Um escritor famoso</button>
+          <button class="quiz-option" data-correct="false">Um jogador de futebol</button>
+        </div>
+        <p class="quiz-feedback"></p>
+      </div>
+  
+      <div class="quiz-item">
+        <p class="quiz-question">Em que ano a escravidão foi abolida no Brasil?</p>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">1870</button>
+          <button class="quiz-option" data-correct="false">1880</button>
+          <button class="quiz-option" data-correct="true">1888</button>
+          <button class="quiz-option" data-correct="false">1890</button>
+        </div>
+        <p class="quiz-feedback"></p>
+      </div>
+
+      <div class="quiz-item">
+        <p class="quiz-question">Qual é a origem do termo "denegrir" e por que ele é problemático?</p>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">É um termo neutro usado para descrever algo ruim.</button>
+          <button class="quiz-option" data-correct="true">Vem de "negritude", e por isso é associado a coisas negativas.</button>
+          <button class="quiz-option" data-correct="false">É apenas um sinônimo de "difamar", sem implicações racistas.</button>
+          <button class="quiz-option" data-correct="false">É um termo técnico usado em pintura.</button>
+        </div>
+        <p class="quiz-feedback"></p>
+      </div>
+  
+      <div class="quiz-item">
+        <p class="quiz-question">Por que o termo "mercado negro" é considerado problemático?</p>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="true">Porque associa "negro" a algo ilícito ou criminoso.</button>
+          <button class="quiz-option" data-correct="false">É apenas uma expressão comercial, sem ofensas.</button>
+          <button class="quiz-option" data-correct="false">Refere-se ao mercado onde escravos eram vendidos.</button>
+          <button class="quiz-option" data-correct="false">Tem origem nos EUA, sem relação com racismo.</button>
+        </div>
+        <p class="quiz-feedback"></p>
+      </div>
+
+      <div class="quiz-item">
+        <p class="quiz-question">O que está errado no termo "criado-mudo"?</p>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="true">Ele faz referência ao racismo estrutural da escravidão.</button>
+          <button class="quiz-option" data-correct="false">É uma expressão sobre móveis de madeira escura.</button>
+          <button class="quiz-option" data-correct="false">Refere-se a empregados que não podiam falar.</button>
+          <button class="quiz-option" data-correct="false">Não há nada de errado, é apenas um móvel.</button>
+        </div>
+        <p class="quiz-feedback"></p>
+      </div>
+  
+      <div class="quiz-item">
+        <p class="quiz-question">Qual expressão pode substituir "inveja branca" sem ser racista?</p>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="true">Inveja positiva.</button>
+          <button class="quiz-option" data-correct="false">Inveja clara.</button>
+          <button class="quiz-option" data-correct="false">Inveja pura.</button>
+          <button class="quiz-option" data-correct="true">Inveja saudável.</button>
+        </div>
+        <p class="quiz-feedback"></p>
+      </div>
+  
+      <div class="quiz-item">
+        <p class="quiz-question">Por que é importante evitar termos como "cabelo ruim" ou "penteado exótico"?</p>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="true">Esses termos são depreciativos e reforçam estereótipos racistas.</button>
+          <button class="quiz-option" data-correct="false">Porque desrespeitam padrões de moda.</button>
+          <button class="quiz-option" data-correct="false">Porque sugerem falta de cuidados pessoais.</button>
+          <button class="quiz-option" data-correct="false">São apenas opiniões estéticas, sem impacto cultural.</button>
+        </div>
+        <p class="quiz-feedback"></p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="mensagens" class="section mensagens">
+    <h2>Deixe Seu Relato</h2>
+    <form class="mensagem-form">
+      <label for="nome">Nome (opcional):</label>
+      <input type="text" id="nome" name="nome" placeholder="Seu nome">
+      <label for="relato">Seu Relato:</label>
+      <textarea id="relato" name="relato" rows="6" placeholder="Conte sua experiência aqui"></textarea>
+      <button type="submit" class="btn-enviar">Enviar Relato</button>
+    </form>
+  </section>
+
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Lei nº 7.716, de 5 de janeiro de 1989 — Repudia todo ato de racismo.</p>
+    <p>&copy; 2024 Consciência Negra.</p>
+  </footer>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <script src="script.js"></script>
+</body>
+</html>

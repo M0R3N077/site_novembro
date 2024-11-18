@@ -1,0 +1,577 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "gemstone";
+    src: url(./assets/gemstone/Gemstone.ttf);
+}
+
+@font-face {
+    font-family: "dripping";
+    src: url(./assets/a_dripping_marker/adrip1.ttf);
+}
+
+@font-face {
+  font-family: "caviar";
+  src: url(./assets/caviar_dreams/CaviarDreams.ttf);
+}
+
+@font-face {
+  font-family: "don";
+  src: url(./assets/don_graffiti/DonGraffiti.otf)
+}
+
+:root{
+  --marrom: #4B2E2E;
+  --bege: #F5DEB3;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+  }
+
+  
+  .section {
+    padding: 80px 20px;
+    min-height: 100vh;
+  }/*# sourceMappingURL=style.css.map */
+
+
+.header {
+  background-color: #222;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Garantir que o header fique no topo, mas abaixo do menu */
+  height: 100px; /* Define a altura fixa do header */
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.8); /* Adiciona um leve sombreamento */
+}
+
+.title {
+font-family: "dripping";
+  font-size: 45px;
+  letter-spacing: 13px;
+  text-transform: uppercase;
+}  
+
+.menu-icon {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.side-menu {
+  width: 300px;
+  background: linear-gradient(135deg, #444, #111);
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: -300px; /* Fora da tela por padrão */
+  transition: 0.4s;
+  z-index: 1500; /* Garantir que fique acima do header */
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  padding-top: 30px;
+  color: white;
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: 0 20px;
+}
+
+.side-menu ul li {
+  margin: 20px 0;
+}
+
+.side-menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  display: block;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.side-menu ul li a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Botão de fechar no menu */
+.close-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 25px;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.close-btn:hover {
+  transform: rotate(90deg);
+}
+
+
+
+/* Seção Hero */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: calc(100vh); /* Reduz a altura total da seção pela altura do header */
+  background: url(./src/WhatsApp\ Image\ 2024-11-18\ at\ 10.38.37.jpeg) no-repeat center center/cover; /* Imagem de fundo */
+  filter: grayscale(40%); /* Efeito acinzentado */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Sobreposição para o texto */
+.hero-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Fundo escuro translúcido para destacar o texto */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px; /* Adiciona espaço nas bordas em telas menores */
+}
+
+.hero-overlay h1 {
+  font-family: 'gemstone';
+  font-size: 5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  margin-bottom: 10px;
+}
+
+.hero-overlay p {
+  font-family: 'caviar';
+  font-size: 2rem;
+  line-height: 1;
+  max-width: 600px;
+}
+
+/* Efeito de transição suave ao carregar */
+.hero-section {
+  transform: scale(1.1);
+  animation: fadeInHero 1.5s ease forwards;
+}
+
+@keyframes fadeInHero {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* Estilo geral da seção História */
+.historia {
+  padding: 40px 60px;
+  width: 100%;
+  background: linear-gradient( var(--marrom), #222);
+}
+
+/* Evento da Linha do Tempo */
+.timeline-event {
+  position: relative;
+  margin: 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.timeline-event.right {
+  display: flex;
+  justify-content: space-evenly; /* Alinha conteúdo à direita */
+}
+
+.timeline-event.left {
+  display:flex;
+  justify-content: space-evenly; /* Alinha conteúdo à esquerda */
+}
+
+/* Conteúdo do Evento */
+.event-content {
+  background: var(--bege);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 16px 20px rgb(124, 10, 10);
+  width: 40%;
+  text-align: center;
+  z-index: 2; /* Mantém acima */
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.event-content h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.event-content p {
+  font-size: 16px;
+}
+
+/* Imagem ao lado do conteúdo */
+.event-image {
+  width: 35%; 
+}
+
+.event-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+}
+
+ /* Efeitos ao passar o mouse */
+ .event-content:hover {
+  transform: scale(1.05) rotateY(0); /* Ampliar levemente */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+
+/* Estilo da Seção Relatos */
+.relatos {
+    background: linear-gradient(to bottom, var(--bege), #222);
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  /* Grid de Relatos */
+  .relatos-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 colunas */
+    grid-gap: 20px; /* Espaço entre os blocos */
+    justify-items: center;
+    align-items: start;
+    margin-top: 50px;
+  }
+  
+  /* Bloco de Relato */
+  .relato-item {
+    background: var(--marrom);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 11px 17px rgb(129, 129, 16);
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    opacity: 0; /* Inicialmente invisível */
+    transform: translateY(20px); /* Deslocado para baixo */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%; /* Ajusta largura */
+    max-width: 200px; /* Limita o tamanho máximo */
+  }
+  
+  /* Imagem no Relato */
+  .relato-item img {
+    display: flex;
+    align-self: center;
+    width: 330px;
+    height: 240px;
+    border-radius: 10px;
+  }
+  
+  /* Nome da Pessoa */
+  .relato-item h3 {
+    font-size: 18px;
+    color: var(--bege);
+  }
+  
+  /* Descrição da História */
+  .relato-item p {
+    font-size: 14px;
+    color: #fff;
+  }
+  
+  /* Classe para exibir os blocos com animação */
+  .relato-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }  
+
+   /* Efeitos ao passar o mouse */
+   .relato-item:hover {
+    transform: scale(1.05) rotateY(0); /* Ampliar levemente */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  }
+
+
+
+
+/* Seção Frases */
+.frases {
+  background: linear-gradient( var(--marrom), #222);
+  padding: 50px 20px;
+  text-align: center;
+  color: white;
+  overflow: hidden; /* Evita bugs de animação fora da área visível */
+}
+
+.frases h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Estilo do Swiper */
+.swiper-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-wrapper{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Caixa da frase */
+.frase-item {
+  background:var(--bege);
+  padding: 20px;
+  height: 230px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px; /* Largura fixa para as caixas */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #333;
+  box-shadow: 0 6px 10px rgb(17, 155, 17);
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(15deg) translateY(20px); /* Inicialmente fora da posição */
+ opacity: 1;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.frase-item p {
+  font-size: 18px;
+  font-style: italic;
+  color: #555;;
+  margin-bottom: 10px;
+}
+
+.frase-item span {
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+}
+
+
+/* Efeito ao aparecer */
+.frase-item.visible {
+  transform: rotateY(0) translateY(0); /* Retorna ao estado normal */
+  opacity: 1; /* Torna visível */
+}
+
+/* Hover para mais destaque */
+.frase-item:hover {
+  transform: scale(1.05) rotateY(0); /* Ampliar levemente */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Botões do Swiper */
+.swiper-button-prev{
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.swiper-button-prev:hover:hover {
+  color: #555;
+}
+
+/* Estilo da seção de quizzes */
+.quizzes {
+  background: linear-gradient(to bottom, var(--bege), #222);
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.quizzes h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Container dos quizzes */
+.quiz-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilo de cada item de quiz */
+.quiz-item {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  background: linear-gradient( var(--marrom), #222);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: #fff;
+}
+
+.quiz-question {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.quiz-option {
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #333;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.quiz-option:hover {
+  background: #e8e8e8;
+}
+
+.quiz-feedback {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  display: none; /* Oculto até interagir */
+}
+
+h5{
+  color: white;
+}
+
+.mensagens {
+  background: linear-gradient( var(--marrom), #222);
+  padding: 50px 20px;
+  box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mensagem-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mensagem-form label {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.mensagem-form input,
+.mensagem-form textarea {
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.mensagem-form input:focus,
+.mensagem-form textarea:focus {
+  border-color: #555;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+.btn-enviar {
+  padding: 15px;
+  font-size: 18px;
+  color: white;
+  background: linear-gradient(135deg, #111, #333);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.btn-enviar:hover {
+  background: linear-gradient(135deg, #333, #111);
+  transform: scale(1.05);
+}
+
+
+
+
+.footer {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+.footer p {
+  margin: 5px 0;
+}
+
+.historia, .frases,  .mensagens{
+    h2{
+        color: #F5DEB3;
+        display: flex;
+        justify-content: center;
+        font-family: "don";
+        font-size: 45px;
+        letter-spacing: 10px;
+    }
+}
+
+.relatos, .quizzes{
+    h2{
+        color: var(--marrom);
+        display: flex;
+        justify-content: center;
+        font-family: "don";
+        font-size: 45px;
+        letter-spacing: 10px;
+    }
+}
